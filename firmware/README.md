@@ -1,4 +1,4 @@
-# Compiling
+# Compiling the bootloader firmware
 Micronucleus can be configured to support all devices of the ATtiny series, with the exception of the reduced core ATtiny 4/5/9/10/20/40.
 
 To allow maximum flexibility, micronucleus supports a [configuration system](/firmware/configuration). 
@@ -21,7 +21,8 @@ Please note that the configuration "t85_aggressive" may be instable unders certa
 
 You can add your own configuration by adding a new folder to /firmware/configurations/. The folder has to contain a customized "Makefile.inc" and "bootloaderconfig.h". 
 
-If changes to the configuration lead to an increase in bootloader size, it may be necessary to [change the bootloader start address](firmware/configuration#computing-the-values).
+If changes to the configuration lead to an increase in bootloader size, i.e. you see errors like `address 0x2026 of main.bin section '.text' is not within region 'text'`,
+it may be necessary to [change the bootloader start address](https://github.com/ArminJo/micronucleus-firmware#computing-the-bootloader-start-address).
 
 Other make options:
 
